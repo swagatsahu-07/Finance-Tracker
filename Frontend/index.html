@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance Tracker | Auth</title>
+    <link rel="stylesheet" href="./css/auth.css" />
+  </head>
+  <body>
+    <div class="authContainer">
+      <h2>Finance Tracker</h2>
+
+      <!-- LOGIN -->
+      <form id="loginSection">
+        <input
+          type="email"
+          id="loginEmail"
+          placeholder="Email address"
+          required
+        />
+
+        <div class="passwordField">
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Password"
+            required
+          />
+          <span class="togglePassword" id="toggleLoginPassword">
+            <svg
+              class="eye-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <p class="switch">
+          New here?
+          <span id="goToRegister">Create an account</span>
+        </p>
+      </form>
+
+      <!-- REGISTER -->
+      <form id="registerSection" class="hidden">
+        <input type="text" id="name" placeholder="Full name" required />
+        <input
+          type="email"
+          id="regEmail"
+          placeholder="Email address"
+          required
+        />
+
+        <div class="passwordField">
+          <input
+            type="password"
+            id="regPassword"
+            placeholder="Password"
+            required
+          />
+          <span class="togglePassword" id="togglePassword">
+            <svg
+              class="eye-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+
+        <!-- Password Error Message -->
+        <p class="passwordError" id="passwordError"></p>
+
+        <button type="submit" id="registerBtn">Register</button>
+
+        <p class="switch">
+          Already have an account?
+          <span id="goToLogin">Login</span>
+        </p>
+      </form>
+    </div>
+
+    <script src="./js/auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./css/dashboard.css" />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topBar">
+    <div class="topBarLeft">Expense Tracker</div>
+    <div class="topBarCenter" id="welcomeUser">Welcome</div>
+    <div class="topBarRight">
+      <button id="viewBudgetBtn">View Budgets</button>
+      <button class="logoutBtn">Logout</button>
+    </div>
+  </div>
+
+  <!-- Budget Modal -->
+  <div id="budgetModal" class="modal hidden">
+  <div class="modalContent">
+    <h3>Monthly Budgets</h3>
+    <ul id="budgetList"></ul>
+    <button id="closeBudget">Close</button>
+  </div>
+</div>
+
+
+  <!-- Summary -->
+  <div class="summaryRow">
+    <div class="summaryCard">
+      Income: ₹<span id="income">0</span>
+    </div>
+    <div class="summaryCard">
+      Expense: ₹<span id="expense">0</span>
+    </div>
+    <div class="summaryCard">
+      Balance: ₹<span id="balance">0</span>
+    </div>
+  </div>
+
+  <!-- Forms Row -->
+  <div class="formRow">
+
+    <!-- Add Income -->
+    <form id="incomeForm">
+      <h3>Add Income</h3>
+      <input type="number" id="incomeAmount" placeholder="Income Amount" required />
+      <input type="text" id="incomeSource" placeholder="Source (Salary, Freelance)" required />
+      <select id="incomeFrequency">
+        <option value="oneTime">One Time</option>
+        <option value="monthly">Monthly</option>
+        <option value="weekly">Weekly</option>
+        <option value="yearly">Yearly</option>
+      </select>
+      <input type="date" id="incomeDate" />
+      <button type="submit">Add Income</button>
+    </form>
+
+    <!-- Add Expense -->
+    <form id="expenseForm">
+      <h3>Add Expense</h3>
+      <input type="number" id="expenseAmount" placeholder="Amount" required />
+      <input type="text" id="expenseCategory" placeholder="Category" />
+      <input type="text" id="expenseDesc" placeholder="Description" />
+      <input type="date" id="expenseDate" />
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <!-- Set Budget -->
+    <form id="budgetForm">
+      <h3>Set Budget</h3>
+      <input type="text" id="budgetCategory" placeholder="Category" />
+      <input type="number" id="budgetAmount" placeholder="Monthly Limit" />
+      <button type="submit">Set Budget</button>
+    </form>
+
+  </div>
+
+  <!-- Transaction History -->
+  <h3>Transaction History</h3>
+  <input type="text" id="searchInput" placeholder="Search category" />
+  <ul id="historyList"></ul>
+
+  <script src="./js/dashboard.js"></script>
+</body>
+</html>
