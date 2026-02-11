@@ -97,14 +97,62 @@ JWT_SECRET=supersecretkey
 
 3️⃣ Database Setup
 
-Create MySQL database:
+=> Create MySQL database:
 
 ```bash
 
 CREATE DATABASE finance_tracker;
+USE finance_tracker;
+
 
 ```
-Import required tables (users, income, expenses, budgets)
+=> Create Tables  - Run the following SQL queries:
+
+```bash
+
+-- USERS TABLE
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(100) UNIQUE,
+  password VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- INCOME TABLE
+CREATE TABLE income (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT,
+  amount DECIMAL(10,2),
+  source VARCHAR(100),
+  frequency VARCHAR(50),
+  income_date DATE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- EXPENSES TABLE
+CREATE TABLE expenses (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT,
+  amount DECIMAL(10,2),
+  category VARCHAR(100),
+  description VARCHAR(255),
+  expense_date DATE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- BUDGET TABLE
+CREATE TABLE budgets (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT,
+  category VARCHAR(100),
+  amount DECIMAL(10,2),
+  month VARCHAR(20),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+```
 
 
 4️⃣ Frontend
