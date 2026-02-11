@@ -38,6 +38,7 @@ A full-stack web application that helps users manage their income, expenses, and
 ---
 
 ## 📁 Project Structure
+```bash
 
 Finance-Tracker/
 │
@@ -57,7 +58,7 @@ Finance-Tracker/
 │
 └── README.md
 
-
+```
 ---
 
 ## ⚙️ Installation & Setup
