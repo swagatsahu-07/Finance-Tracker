@@ -63,6 +63,10 @@ Finance-Tracker/
 
 ## ⚙️ Installation & Setup
 
+### Requirements
+- Node.js (v16+ recommended)
+- MySQL Server
+
 ### 1️⃣ Clone Repository
 
 ```bash
@@ -73,7 +77,7 @@ cd Finance-Tracker
 
 ```
 
-2️⃣ Backend Setup
+### 2️⃣ Backend Setup
 
 ```bash
 
@@ -95,7 +99,7 @@ JWT_SECRET=supersecretkey
 
 ```
 
-3️⃣ Database Setup
+### 3️⃣ Database Setup
 
 => Create MySQL database:
 
@@ -155,7 +159,7 @@ CREATE TABLE budgets (
 ```
 
 
-4️⃣ Frontend
+### 4️⃣ Frontend
 
 ```bash
 
