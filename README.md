@@ -36,7 +36,7 @@ A full-stack web application that helps users manage their income, expenses, and
 - bcrypt (Password Hashing)
 
 ---
-
+0
 ## 📁 Project Structure
 ```bash
 
@@ -67,7 +67,7 @@ Finance-Tracker/
 - Node.js (v16+ recommended)
 - MySQL Server
 
-### 1️⃣ Clone Repository
+### 1️ Clone Repository
 
 ```bash
 
@@ -77,7 +77,7 @@ cd Finance-Tracker
 
 ```
 
-### 2️⃣ Backend Setup
+### 2️ Backend Setup
 
 ```bash
 
@@ -99,7 +99,7 @@ JWT_SECRET=supersecretkey
 
 ```
 
-### 3️⃣ Database Setup
+### 3️ Database Setup
 
 => Create MySQL database:
 
@@ -157,9 +157,13 @@ CREATE TABLE budgets (
 
 
 ```
+### 4 Start Backend Server
+```bash
+cd .\Backend\
+node index.js
+```
 
-
-### 4️⃣ Frontend
+### 5 Frontend
 
 ```bash
 
