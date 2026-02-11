@@ -67,7 +67,7 @@ Finance-Tracker/
 
 ```bash
 
-git clone <your-repository-link>
+git clone https://github.com/swagatsahu-07/Finance-Tracker
 cd Finance-Tracker
 
 
